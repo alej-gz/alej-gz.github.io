@@ -207,14 +207,6 @@
                 </div>
             </div>
         </div>
-
-        <div class="audio-box" style="margin-bottom: 30px; text-align: center;">
-            <span class="label" style="font-size: 0.6rem; letter-spacing: 2px;">listening to: emails i can't send</span>
-                <audio controls style="width: 100%; max-width: 300px; height: 25px; margin-top: 10px; filter: sepia(100%) hue-rotate(310deg) saturate(200%) brightness(80%);">
-                    <source src="audio.mp3" type="audio/mpeg">
-                Tu navegador no soporta el audio.
-                </audio>
-        </div>
         
         <div class="socials">
             <h1>Socials</h1>
@@ -230,5 +222,43 @@
     <div class="punto" style="left: 70%; animation-delay: 6s;"><i class="fas fa-heart"></i></div>
     <div class="punto" style="left: 90%; animation-delay: 8s;"><i class="fas fa-heart"></i></div>
 
+    <div class="player-flotante">
+    <div class="player-info">
+        <span class="label" style="font-size: 10px; margin-bottom: 5px; color: #A51C30;">now playing...</span>
+    </div>
+    <audio controls style="height: 30px; width: 200px; filter: sepia(100%) hue-rotate(310deg) saturate(180%) brightness(90%);">
+        <source src="audio.mp3" type="audio/mpeg">
+    </audio>
+</div>
+
+<style>
+    .player-flotante {
+        position: fixed;
+        bottom: 20px;
+        right: 20px;
+        background: rgba(255, 255, 255, 0.9);
+        border: 1px solid #A51C30;
+        padding: 10px;
+        border-radius: 8px;
+        z-index: 1000;
+        box-shadow: 0 4px 15px rgba(165, 28, 48, 0.1);
+        backdrop-filter: blur(5px);
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+    }
+
+    /* Ocultar en pantallas muy pequeñas para que no estorbe */
+    @media (max-width: 480px) {
+        .player-flotante {
+            bottom: 10px;
+            right: 10px;
+            width: 150px;
+        }
+        .player-flotante audio {
+            width: 140px;
+        }
+    }
+</style>
 </body>
 </html>
