@@ -1,7 +1,7 @@
 <!DOCTYPE html>
 <html lang="es">
 <head>
-    <title>Paul Alejandro | Referencias Personales</title>
+    <title>D-Ale | Referencias Personales</title>
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
@@ -9,12 +9,14 @@
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
     
     <style>
-        /* Paleta Sabrina Carpenter: Crema (#F9F5F0) y Carmesí (#A51C30) */
+        /* Estética: Sabrina Carpenter - Emails I Can't Send */
+        /* Colores: Crema (#FDFBF7), Carmesí (#A51C30), Gris Texto (#333) */
+        
         * { margin: 0; padding: 0; box-sizing: border-box; }
         
         body {
-            background-color: #F9F5F0; /* Color crema suave */
-            font-family: 'Georgia', serif; /* Fuente más clásica y romántica */
+            background-color: #FDFBF7; /* Fondo Crema */
+            font-family: 'Georgia', serif; /* Fuente clásica/carta */
             color: #333;
             min-height: 100vh;
             padding: 50px 20px;
@@ -27,28 +29,34 @@
         .main-text h1 {
             color: #A51C30; /* Carmesí */
             font-size: 2.2rem;
-            letter-spacing: 2px;
+            letter-spacing: 1px;
             margin-bottom: 5px;
+            text-transform: lowercase; /* Estilo estético */
+        }
+
+        .main-text p {
+            color: #A51C30;
+            font-style: italic;
+            opacity: 0.8;
         }
 
         .seccion-tarea {
-            background: white;
+            background: #FFFFFF;
             border: 1px solid #EAE0D5;
-            border-radius: 10px; /* Bordes menos redondeados para estilo carta */
+            border-radius: 4px; /* Bordes rectos tipo sobre */
             padding: 25px;
             margin-bottom: 25px;
-            box-shadow: 5px 5px 15px rgba(165, 28, 48, 0.05);
-            position: relative;
+            box-shadow: 2px 2px 15px rgba(165, 28, 48, 0.05);
         }
 
-        /* Estilo de encabezado tipo "E-mail" */
         .seccion-tarea h2 { 
             color: #A51C30; 
             margin-bottom: 15px; 
             font-size: 1.2rem; 
-            border-bottom: 2px solid #A51C30; 
+            border-bottom: 1.5px solid #A51C30; 
             padding-bottom: 5px;
-            display: inline-block;
+            font-weight: normal;
+            text-transform: lowercase;
         }
 
         .grid-datos { display: grid; grid-template-columns: repeat(auto-fit, minmax(280px, 1fr)); gap: 15px; }
@@ -56,17 +64,22 @@
         .label { 
             color: #A51C30; 
             font-weight: bold; 
-            font-size: 0.75rem; 
+            font-size: 0.7rem; 
             text-transform: uppercase; 
             display: block; 
-            margin-bottom: 2px; 
-            opacity: 0.8;
+            margin-bottom: 4px; 
+            letter-spacing: 1px;
         }
 
-        .dato-item { border-bottom: 1px dotted #EAE0D5; padding-bottom: 5px; }
+        .dato-item { 
+            border-bottom: 1px dotted #EAE0D5; 
+            padding-bottom: 8px; 
+            font-size: 0.95rem;
+            line-height: 1.5;
+        }
 
         .socials { text-align: center; margin-top: 40px; padding-bottom: 20px; }
-        .socials h1 { color: #A51C30; font-family: 'Georgia', serif; font-style: italic; }
+        .socials h1 { margin-bottom: 25px; font-size: 1.8rem; color: #A51C30; font-style: italic; font-weight: normal; }
         
         .socials a {
             color: #A51C30 !important;
@@ -74,31 +87,38 @@
             margin: 0 20px;
             text-decoration: none;
             display: inline-block;
-            transition: 0.3s;
+            transition: 0.3s ease;
         }
         
-        .socials a:hover { transform: scale(1.2); color: #740A1B !important; }
+        .socials a:hover { transform: translateY(-8px) scale(1.1); opacity: 0.7; }
 
-        /* Corazones voladores estilo Sabrina */
-        .corazon {
+        /* Corazones animados en lugar de puntos */
+        .punto {
             position: fixed;
             color: #A51C30;
-            font-size: 10px;
+            font-size: 14px;
             bottom: -20px;
             z-index: 1;
             pointer-events: none;
-            animation: fly 8s linear infinite;
-            opacity: 0.3;
+            animation: fly 10s linear infinite;
+            opacity: 0.2;
         }
-
+        
         @keyframes fly {
             0% { transform: translateY(0) rotate(0deg); opacity: 0; }
-            10% { opacity: 0.4; }
+            10% { opacity: 0.3; }
             100% { transform: translateY(-110vh) rotate(360deg); opacity: 0; }
         }
 
-        img {
-            filter: sepia(20%) contrast(110%); /* Efecto vintage suave */
+        .profile-img {
+            width: 140px; height: 140px; 
+            border-radius: 50%; 
+            border: 2px solid #A51C30; 
+            padding: 5px;
+            margin-bottom: 15px; 
+            object-fit: cover;
+            background: white;
+            filter: sepia(10%);
         }
     </style>
 </head>
@@ -107,75 +127,12 @@
     <div class="info-container">
         
         <div class="main-text" style="text-align: center; margin-bottom: 40px;">
-            <img src="Perfil.jpeg" alt="Paul Alejandro" style="width: 150px; height: 150px; border-radius: 50%; border: 2px solid #A51C30; padding: 5px; margin-bottom: 15px; object-fit: cover; background: white;">
-            <h1>paul alejandro guzmán calle</h1>
-            <p style="color: #A51C30; font-style: italic;">subject: referencias personales / técnicas de estudio</p>
+            <img src="Perfil.jpeg" alt="Paul Alejandro" class="profile-img">
+            <h1>PAUL ALEJANDRO GUZMÁN CALLE</h1>
+            <p>Materia: Técnicas de Estudio | Perfil de Referencia</p>
         </div>
 
         <div class="seccion-tarea">
-            <h2><i class="fas fa-envelope"></i> Basic Info</h2>
+            <h2><i class="fas fa-id-card"></i> Información Básica</h2>
             <div class="grid-datos">
-                <div class="dato-item"><span class="label">Nombre</span>Paul Alejandro Guzmán Calle</div>
-                <div class="dato-item"><span class="label">Procedencia</span>Llallagua - Potosí, Bolivia</div>
-                <div class="dato-item"><span class="label">Correo</span>guzmancallepa@gmail.com</div>
-                <div class="dato-item"><span class="label">Sexo</span>Masculino</div>
-                <div class="dato-item" style="grid-column: 1 / -1;">
-                    <span class="label">Motivación</span>
-                    <p style="font-size: 0.95rem; line-height: 1.6; text-align: justify; color: #444;">
-                        Elegí Ingeniería en Sistemas porque quiero dominar el arte de crear soluciones desde cero. Me apasiona la lógica necesaria para resolver problemas complejos y la satisfacción de ver que el código finalmente corre. Para mí, programar es transformar problemas en oportunidades de innovación, construyendo herramientas que faciliten el día a día de las personas.
-                    </p>
-                </div>
-            </div>
-        </div>
-
-        <div class="seccion-tarea">
-            <h2><i class="fas fa-heart"></i> Formación e Idiomas</h2>
-            <div class="grid-datos">
-                <div class="dato-item"><span class="label">Grado de Formación</span>Unidad Educativa "Siglo XX - América"</div>
-                <div class="dato-item"><span class="label">Nivel de Idiomas</span>Español (Nativo) • Inglés (Avanzado)</div>
-            </div>
-        </div>
-
-        <div class="seccion-tarea">
-            <h2><i class="fas fa-star"></i> Logros y Experiencia</h2>
-            <div class="grid-datos">
-                <div class="dato-item">
-                    <span class="label">Científica</span>
-                    • Olimpiada UMSA (Bronce)<br>
-                    • Canguro Matemático (Oro)<br>
-                    • Olimpiada de Matemáticas (Plata)
-                </div>
-                <div class="dato-item">
-                    <span class="label">Laboral</span>
-                    <strong>Instructor de Inglés</strong><br>
-                    Instituto CESICOM (2021-2024)
-                </div>
-            </div>
-        </div>
-
-        <div class="seccion-tarea">
-            <h2><i class="fas fa-pen"></i> Especialización de Postgrado</h2>
-            <div class="grid-datos">
-                <div class="dato-item" style="grid-column: 1 / -1;">
-                    <span class="label">Área de Interés</span>
-                    <p>Maestría en <strong>Ingeniería de Factores Humanos</strong> o Interacción Persona-Computador. Me interesa cómo la tecnología se adapta a las capacidades psicológicas y cognitivas del usuario.</p>
-                </div>
-            </div>
-        </div>
-
-        <div class="socials">
-            <h1>stay connected...</h1>
-            <a href="https://wa.me/59171889644" target="_blank"><i class="fa-brands fa-whatsapp"></i></a>
-            <a href="https://discord.com/users/729416170301816832" target="_blank"><i class="fa-brands fa-discord"></i></a>
-            <a href="https://github.com/D-Ale" target="_blank"><i class="fa-brands fa-github"></i></a>
-        </div>
-    </div>
-
-    <div class="corazon" style="left: 10%;"><i class="fas fa-heart"></i></div>
-    <div class="corazon" style="left: 30%; animation-delay: 2s;"><i class="fas fa-heart"></i></div>
-    <div class="corazon" style="left: 55%; animation-delay: 4s;"><i class="fas fa-star"></i></div>
-    <div class="corazon" style="left: 75%; animation-delay: 6s;"><i class="fas fa-heart"></i></div>
-    <div class="corazon" style="left: 90%; animation-delay: 1s;"><i class="fas fa-star"></i></div>
-
-</body>
-</html>
+                <div class
