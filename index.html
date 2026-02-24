@@ -1,7 +1,7 @@
 <!DOCTYPE html>
 <html lang="es">
 <head>
-    <title>D-Ale | Referencias Personales</title>
+    <title>Paul Alejandro | Referencias Personales</title>
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
@@ -9,66 +9,96 @@
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
     
     <style>
+        /* Paleta Sabrina Carpenter: Crema (#F9F5F0) y Carmesí (#A51C30) */
         * { margin: 0; padding: 0; box-sizing: border-box; }
+        
         body {
-            background: #1a1a1e linear-gradient(135deg, #1c1b1f, #202227, #1b1820);
-            background-size: 400% 400%;
-            animation: gradientBG 15s ease infinite;
-            font-family: 'Segoe UI', Arial, sans-serif;
-            color: white;
+            background-color: #F9F5F0; /* Color crema suave */
+            font-family: 'Georgia', serif; /* Fuente más clásica y romántica */
+            color: #333;
             min-height: 100vh;
             padding: 50px 20px;
             overflow-x: hidden;
             position: relative;
         }
-        @keyframes gradientBG {
-            0% { background-position: 0% 50%; }
-            50% { background-position: 100% 50%; }
-            100% { background-position: 0% 50%; }
-        }
+
         .info-container { max-width: 850px; margin: 0 auto; position: relative; z-index: 10; }
+
+        .main-text h1 {
+            color: #A51C30; /* Carmesí */
+            font-size: 2.2rem;
+            letter-spacing: 2px;
+            margin-bottom: 5px;
+        }
+
         .seccion-tarea {
-            background: rgba(255, 255, 255, 0.05);
-            backdrop-filter: blur(10px);
-            border: 1px solid rgba(255, 255, 255, 0.1);
-            border-radius: 15px;
+            background: white;
+            border: 1px solid #EAE0D5;
+            border-radius: 10px; /* Bordes menos redondeados para estilo carta */
             padding: 25px;
             margin-bottom: 25px;
+            box-shadow: 5px 5px 15px rgba(165, 28, 48, 0.05);
+            position: relative;
         }
-        .seccion-tarea h2 { color: #5865F2; margin-bottom: 15px; font-size: 1.4rem; border-bottom: 1px solid rgba(88, 101, 242, 0.2); padding-bottom: 5px; }
+
+        /* Estilo de encabezado tipo "E-mail" */
+        .seccion-tarea h2 { 
+            color: #A51C30; 
+            margin-bottom: 15px; 
+            font-size: 1.2rem; 
+            border-bottom: 2px solid #A51C30; 
+            padding-bottom: 5px;
+            display: inline-block;
+        }
+
         .grid-datos { display: grid; grid-template-columns: repeat(auto-fit, minmax(280px, 1fr)); gap: 15px; }
-        .label { color: #00d4ff; font-weight: bold; font-size: 0.7rem; text-transform: uppercase; display: block; margin-bottom: 2px; }
+        
+        .label { 
+            color: #A51C30; 
+            font-weight: bold; 
+            font-size: 0.75rem; 
+            text-transform: uppercase; 
+            display: block; 
+            margin-bottom: 2px; 
+            opacity: 0.8;
+        }
+
+        .dato-item { border-bottom: 1px dotted #EAE0D5; padding-bottom: 5px; }
 
         .socials { text-align: center; margin-top: 40px; padding-bottom: 20px; }
-        .socials h1 { margin-bottom: 25px; font-size: 1.8rem; }
+        .socials h1 { color: #A51C30; font-family: 'Georgia', serif; font-style: italic; }
+        
         .socials a {
-            color: white !important;
-            font-size: 55px;
+            color: #A51C30 !important;
+            font-size: 45px;
             margin: 0 20px;
             text-decoration: none;
             display: inline-block;
             transition: 0.3s;
         }
-        .socials a:hover { transform: translateY(-10px); }
-        .fa-whatsapp:hover { color: #25D366 !important; }
-        .fa-discord:hover { color: #5865F2 !important; }
-        .fa-github:hover { color: #adb5bd !important; }
+        
+        .socials a:hover { transform: scale(1.2); color: #740A1B !important; }
 
-        .punto {
+        /* Corazones voladores estilo Sabrina */
+        .corazon {
             position: fixed;
-            width: 4px; height: 4px;
-            background: white;
-            border-radius: 50%;
+            color: #A51C30;
+            font-size: 10px;
             bottom: -20px;
             z-index: 1;
             pointer-events: none;
-            animation: fly 10s linear infinite;
-            box-shadow: 0 0 8px white;
+            animation: fly 8s linear infinite;
+            opacity: 0.3;
         }
+
         @keyframes fly {
-            0% { transform: translateY(0); opacity: 0; }
-            10% { opacity: 0.8; }
-            100% { transform: translateY(-110vh); opacity: 0; }
+            0% { transform: translateY(0) rotate(0deg); opacity: 0; }
+            10% { opacity: 0.4; }
+            100% { transform: translateY(-110vh) rotate(360deg); opacity: 0; }
+        }
+
+        img {
+            filter: sepia(20%) contrast(110%); /* Efecto vintage suave */
         }
     </style>
 </head>
@@ -77,29 +107,29 @@
     <div class="info-container">
         
         <div class="main-text" style="text-align: center; margin-bottom: 40px;">
-            <img src="Perfil.jpeg" alt="Paul Alejandro" style="width: 140px; height: 140px; border-radius: 50%; border: 4px solid #5865F2; margin-bottom: 15px; object-fit: cover; box-shadow: 0 0 20px rgba(88, 101, 242, 0.5);">
-            <h1>PAUL ALEJANDRO GUZMÁN CALLE</h1>
-            <p>Materia: Técnicas de Estudio | Perfil de Referencia</p>
+            <img src="Perfil.jpeg" alt="Paul Alejandro" style="width: 150px; height: 150px; border-radius: 50%; border: 2px solid #A51C30; padding: 5px; margin-bottom: 15px; object-fit: cover; background: white;">
+            <h1>paul alejandro guzmán calle</h1>
+            <p style="color: #A51C30; font-style: italic;">subject: referencias personales / técnicas de estudio</p>
         </div>
 
         <div class="seccion-tarea">
-            <h2><i class="fas fa-id-card"></i> Información Básica</h2>
+            <h2><i class="fas fa-envelope"></i> Basic Info</h2>
             <div class="grid-datos">
-                <div class="dato-item"><span class="label">Nombre y Apellido</span>Paul Alejandro Guzmán Calle</div>
+                <div class="dato-item"><span class="label">Nombre</span>Paul Alejandro Guzmán Calle</div>
                 <div class="dato-item"><span class="label">Procedencia</span>Llallagua - Potosí, Bolivia</div>
-                <div class="dato-item"><span class="label">Correo Electrónico</span>guzmancallepa@gmail.com</div>
+                <div class="dato-item"><span class="label">Correo</span>guzmancallepa@gmail.com</div>
                 <div class="dato-item"><span class="label">Sexo</span>Masculino</div>
-                <div class="dato-item" style="grid-column: 1 / -1;"><span class="label">Motivación</span><p>Desde que tuve mi primer contacto con una computadora, no me conformé con solo usar las aplicaciones; siempre tuve esa curiosidad de entender qué pasaba detrás de la pantalla. Mi verdadera motivación para estudiar Ingeniería en Sistemas no es solo conseguir un título, sino dominar el arte de crear soluciones desde cero. Me apasiona esa sensación de tener un problema complejo frente a mí, analizar la lógica necesaria y sentir la satisfacción increíble de ver que el código finalmente corre sin errores. Para mí, programar es lo más cercano que tenemos a la magia en el mundo real: escribes unas palabras y, de pronto, creas algo que antes no existía y que puede ayudar a miles de personas en su vida cotidiana.</p>
-
-<p>Elegí esta carrera porque entiendo que el mundo actual se mueve a través de bits y bytes, y quiero ser quien diseñe esos sistemas, no solo un espectador que los consume. Me motiva saber que en esta profesión nunca se deja de aprender; cada error en la consola es una lección de paciencia y cada nueva tecnología es una oportunidad para descubrir algo nuevo. No busco solo entender el software, sino desarrollar una mentalidad lógica que me permita resolver retos en cualquier área de la vida. Sé que habrá noches de frustración y desvelo, pero la idea de poder construir herramientas que faciliten el día a día de la gente me mantiene enfocado en mis objetivos a largo plazo.</p>
-
-<p>Al final, mi meta es dejar mi propia huella en el mundo digital, aportando mi creatividad y mi esfuerzo para que la tecnología sea más humana, eficiente y accesible para todos. Estudiar sistemas representa para mí el reto más grande y la oportunidad más emocionante de mi vida profesional. Estoy convencido de que, mediante la arquitectura de software y el pensamiento computacional, puedo contribuir significativamente al desarrollo de mi comunidad. Esta carrera es el puente definitivo entre la creatividad lógica y la realidad práctica, permitiéndome transformar problemas en oportunidades de innovación constante. Mi compromiso con esta disciplina surge de la convicción de que el futuro se construye sobre algoritmos eficientes y una visión ética del desarrollo tecnológico global.</p>
+                <div class="dato-item" style="grid-column: 1 / -1;">
+                    <span class="label">Motivación</span>
+                    <p style="font-size: 0.95rem; line-height: 1.6; text-align: justify; color: #444;">
+                        Elegí Ingeniería en Sistemas porque quiero dominar el arte de crear soluciones desde cero. Me apasiona la lógica necesaria para resolver problemas complejos y la satisfacción de ver que el código finalmente corre. Para mí, programar es transformar problemas en oportunidades de innovación, construyendo herramientas que faciliten el día a día de las personas.
+                    </p>
                 </div>
             </div>
         </div>
 
         <div class="seccion-tarea">
-            <h2><i class="fas fa-graduation-cap"></i> Formación e Idiomas</h2>
+            <h2><i class="fas fa-heart"></i> Formación e Idiomas</h2>
             <div class="grid-datos">
                 <div class="dato-item"><span class="label">Grado de Formación</span>Unidad Educativa "Siglo XX - América"</div>
                 <div class="dato-item"><span class="label">Nivel de Idiomas</span>Español (Nativo) • Inglés (Avanzado)</div>
@@ -107,19 +137,16 @@
         </div>
 
         <div class="seccion-tarea">
-            <h2><i class="fas fa-flask"></i> Experiencia Científica y Laboral</h2>
+            <h2><i class="fas fa-star"></i> Logros y Experiencia</h2>
             <div class="grid-datos">
                 <div class="dato-item">
-                    <span class="label">Experiencia Científica</span>
-                    <div style="font-size: 0.85rem; line-height: 1.4;">
-                        • Olimpiada de Informática (2018-2019)<br>
-                        • Olimpiadas UMSA (Bronce, 2020)<br>
-                        • Canguro Matemático (Oro, 2021)<br>
-                        • Olimpiada de Matemáticas (Plata, 2021)
-                    </div>
+                    <span class="label">Científica</span>
+                    • Olimpiada UMSA (Bronce)<br>
+                    • Canguro Matemático (Oro)<br>
+                    • Olimpiada de Matemáticas (Plata)
                 </div>
                 <div class="dato-item">
-                    <span class="label">Experiencia Laboral</span>
+                    <span class="label">Laboral</span>
                     <strong>Instructor de Inglés</strong><br>
                     Instituto CESICOM (2021-2024)
                 </div>
@@ -127,44 +154,28 @@
         </div>
 
         <div class="seccion-tarea">
-    <h2><i class="fas fa-brain"></i> Especialización</h2>
-    <div class="grid-datos">
-        <div class="dato-item" style="grid-column: 1 / -1;">
-            <span class="label">Meta Académica de Postgrado</span>
-            <p>Mi objetivo es realizar una <strong>Maestría en Ingeniería de Factores Humanos (Human Factors Engineering)</strong> o en <strong>Ciencias de la Computación con especialidad en Interacción Persona-Computador</strong>. Estos programas permiten a un Ingeniero en Sistemas diseñar entornos complejos donde la tecnología se adapta perfectamente a las capacidades psicológicas y cognitivas del usuario.</p>
-        </div>
-        <div class="dato-item">
-            <span class="label">Línea de Investigación</span>
-            <p><strong>Computación Afectiva:</strong> Desarrollo de sistemas capaces de reconocer e interpretar las emociones humanas para mejorar la salud mental.</p>
-        </div>
-        <div class="dato-item">
-            <span class="label">Aplicación Práctica</span>
-            <p>Optimización de sistemas sociotécnicos mediante el análisis conductual y el diseño de interfaces cerebro-computador.</p>
-        </div>
-    </div>
-</div>
-        
-        <div class="seccion-tarea">
-            <h2><i class="fas fa-user-shield"></i> Destrezas y Referencia</h2>
+            <h2><i class="fas fa-pen"></i> Especialización de Postgrado</h2>
             <div class="grid-datos">
-                <div class="dato-item"><span class="label">Destrezas</span>Pensamiento crítico, lógica, resolución de problemas, adaptabilidad</div>
-                <div class="dato-item"><span class="label">Referencia (Tutor)</span>Angélica Calle Limachi • 73880366</div>
+                <div class="dato-item" style="grid-column: 1 / -1;">
+                    <span class="label">Área de Interés</span>
+                    <p>Maestría en <strong>Ingeniería de Factores Humanos</strong> o Interacción Persona-Computador. Me interesa cómo la tecnología se adapta a las capacidades psicológicas y cognitivas del usuario.</p>
+                </div>
             </div>
         </div>
 
         <div class="socials">
-            <h1>Socials</h1>
+            <h1>stay connected...</h1>
             <a href="https://wa.me/59171889644" target="_blank"><i class="fa-brands fa-whatsapp"></i></a>
             <a href="https://discord.com/users/729416170301816832" target="_blank"><i class="fa-brands fa-discord"></i></a>
             <a href="https://github.com/D-Ale" target="_blank"><i class="fa-brands fa-github"></i></a>
         </div>
     </div>
 
-    <div class="punto" style="left: 10%;"></div>
-    <div class="punto" style="left: 30%; animation-delay: 2s;"></div>
-    <div class="punto" style="left: 50%; animation-delay: 4s;"></div>
-    <div class="punto" style="left: 70%; animation-delay: 6s;"></div>
-    <div class="punto" style="left: 90%; animation-delay: 8s;"></div>
+    <div class="corazon" style="left: 10%;"><i class="fas fa-heart"></i></div>
+    <div class="corazon" style="left: 30%; animation-delay: 2s;"><i class="fas fa-heart"></i></div>
+    <div class="corazon" style="left: 55%; animation-delay: 4s;"><i class="fas fa-star"></i></div>
+    <div class="corazon" style="left: 75%; animation-delay: 6s;"><i class="fas fa-heart"></i></div>
+    <div class="corazon" style="left: 90%; animation-delay: 1s;"><i class="fas fa-star"></i></div>
 
 </body>
 </html>
