@@ -4,24 +4,16 @@ const projects = [
   {
     title: "Portfolio Personal",
     description:
-      "P\u00e1gina personal de referencias y perfil profesional. Dise\u00f1ada para presentar formaci\u00f3n acad\u00e9mica, logros y \u00e1reas de especializaci\u00f3n.",
-    tags: ["HTML", "CSS", "JavaScript", "GitHub Pages"],
-    liveUrl: "https://alej-gz.github.io/",
+      "Página personal de referencias y perfil profesional. Diseñada para presentar formación académica, logros y áreas de especialización.",
+    tags: ["Next.js", "TypeScript", "Tailwind CSS", "Vercel"],
+    liveUrl: "https://coso-seven.vercel.app",
     githubUrl: "https://github.com/alej-gz/alej-gz.github.io",
   },
   {
-    title: "Arquitecturas Cognitivas",
+    title: "Bots de Discord",
     description:
-      "Investigaci\u00f3n y desarrollo de modelos computacionales basados en procesos mentales humanos para mejorar la toma de decisiones en sistemas de IA.",
-    tags: ["IA", "Ciencias Cognitivas", "Modelado", "Algoritmos"],
-    liveUrl: "#",
-    githubUrl: "#",
-  },
-  {
-    title: "Pr\u00f3ximamente...",
-    description:
-      "Nuevos proyectos en camino. Siempre explorando la intersecci\u00f3n entre tecnolog\u00eda, creatividad y la mente humana.",
-    tags: ["React", "Next.js", "TypeScript", "En desarrollo"],
+      "Desarrollo de bots para servidores de Discord con comandos personalizados. Primeros proyectos de programación en Java, explorando automatización e interacción con APIs externas.",
+    tags: ["Java", "Discord API", "Automatización"],
     liveUrl: "#",
     githubUrl: "#",
   },
@@ -38,7 +30,7 @@ export function ProjectsSection() {
           <div className="h-px flex-1 bg-border" />
         </div>
         <p className="text-center text-muted-foreground font-[var(--font-body)] mb-16 max-w-lg mx-auto">
-          {"Una colecci\u00f3n de cosas que he construido con cuidado y atenci\u00f3n al detalle."}
+          {"Una colección de cosas que he construido con cuidado y atención al detalle."}
         </p>
 
         <div className="flex flex-col gap-8">
@@ -73,20 +65,28 @@ export function ProjectsSection() {
                 </div>
 
                 <div className="flex items-center gap-3 md:flex-shrink-0">
-                  <a
-                    href={project.githubUrl}
-                    className="w-10 h-10 rounded-full border border-border flex items-center justify-center text-muted-foreground hover:text-primary hover:border-primary transition-colors"
-                    aria-label={`View ${project.title} on GitHub`}
-                  >
-                    <Github className="h-4 w-4" />
-                  </a>
-                  <a
-                    href={project.liveUrl}
-                    className="w-10 h-10 rounded-full border border-border flex items-center justify-center text-muted-foreground hover:text-primary hover:border-primary transition-colors"
-                    aria-label={`View ${project.title} live demo`}
-                  >
-                    <ExternalLink className="h-4 w-4" />
-                  </a>
+                  {project.githubUrl !== "#" && (
+                    <a
+                      href={project.githubUrl}
+                      target="_blank"
+                      rel="noopener noreferrer"
+                      className="w-10 h-10 rounded-full border border-border flex items-center justify-center text-muted-foreground hover:text-primary hover:border-primary transition-colors"
+                      aria-label={`Ver ${project.title} en GitHub`}
+                    >
+                      <Github className="h-4 w-4" />
+                    </a>
+                  )}
+                  {project.liveUrl !== "#" && (
+                    <a
+                      href={project.liveUrl}
+                      target="_blank"
+                      rel="noopener noreferrer"
+                      className="w-10 h-10 rounded-full border border-border flex items-center justify-center text-muted-foreground hover:text-primary hover:border-primary transition-colors"
+                      aria-label={`Ver ${project.title} en vivo`}
+                    >
+                      <ExternalLink className="h-4 w-4" />
+                    </a>
+                  )}
                 </div>
               </div>
             </article>
