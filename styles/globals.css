@@ -74,6 +74,59 @@
   --sidebar-ring: oklch(0.439 0 0);
 }
 
+/* 🐾 Tema: Man's Best Friend — estilo borgoña vintage */
+.dog {
+  --background: oklch(0.13 0.04 15);
+  --foreground: oklch(0.92 0.03 60);
+  --card: oklch(0.17 0.045 15);
+  --card-foreground: oklch(0.92 0.03 60);
+  --popover: oklch(0.17 0.045 15);
+  --popover-foreground: oklch(0.92 0.03 60);
+  --primary: oklch(0.82 0.06 65);
+  --primary-foreground: oklch(0.13 0.04 15);
+  --secondary: oklch(0.21 0.05 15);
+  --secondary-foreground: oklch(0.92 0.03 60);
+  --muted: oklch(0.21 0.05 15);
+  --muted-foreground: oklch(0.62 0.04 30);
+  --accent: oklch(0.27 0.06 15);
+  --accent-foreground: oklch(0.92 0.03 60);
+  --destructive: oklch(0.577 0.245 27.325);
+  --destructive-foreground: oklch(0.637 0.237 25.331);
+  --border: oklch(0.27 0.055 15);
+  --input: oklch(0.27 0.055 15);
+  --ring: oklch(0.82 0.06 65);
+  --sidebar: oklch(0.15 0.04 15);
+  --sidebar-foreground: oklch(0.92 0.03 60);
+  --sidebar-primary: oklch(0.82 0.06 65);
+  --sidebar-primary-foreground: oklch(0.13 0.04 15);
+  --sidebar-accent: oklch(0.21 0.05 15);
+  --sidebar-accent-foreground: oklch(0.92 0.03 60);
+  --sidebar-border: oklch(0.27 0.055 15);
+  --sidebar-ring: oklch(0.82 0.06 65);
+}
+
+/* Grano vintage + patitas en tema dog */
+.dog body::after {
+  content: "";
+  position: fixed;
+  inset: 0;
+  background-image: url("data:image/svg+xml,%3Csvg viewBox='0 0 200 200' xmlns='http://www.w3.org/2000/svg'%3E%3Cfilter id='noise'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='0.85' numOctaves='4' stitchTiles='stitch'/%3E%3C/filter%3E%3Crect width='100%25' height='100%25' filter='url(%23noise)' opacity='1'/%3E%3C/svg%3E");
+  opacity: 0.04;
+  pointer-events: none;
+  z-index: 9999;
+}
+
+.dog body::before {
+  content: "🐾";
+  position: fixed;
+  bottom: 1.5rem;
+  left: 1.5rem;
+  font-size: 1.5rem;
+  opacity: 0.12;
+  pointer-events: none;
+  z-index: 0;
+}
+
 @theme inline {
   --font-sans: 'Geist', 'Geist Fallback';
   --font-mono: 'Geist Mono', 'Geist Mono Fallback';
