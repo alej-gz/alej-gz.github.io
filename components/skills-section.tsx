@@ -1,21 +1,30 @@
-import { Heart } from "lucide-react"
+import { Heart, TrendingUp } from "lucide-react"
 
 const skillCategories = [
   {
-    title: "Destrezas T\u00e9cnicas",
-    skills: ["Pensamiento l\u00f3gico-matem\u00e1tico", "An\u00e1lisis de sistemas", "Modelado de procesos", "Abstracci\u00f3n de datos", "Patrones conductuales"],
+    title: "Destrezas Técnicas",
+    icon: "heart",
+    skills: ["Pensamiento lógico-matemático", "Análisis de sistemas", "Patrones conductuales"],
   },
   {
-    title: "Tecnolog\u00edas",
-    skills: ["React", "Next.js", "TypeScript", "JavaScript", "HTML", "CSS", "Tailwind CSS"],
+    title: "Tecnologías",
+    icon: "heart",
+    skills: ["JavaScript", "TypeScript", "Lua", "HTML", "CSS", "C++", "React (aprendiendo)", "Next.js (aprendiendo)"],
   },
   {
     title: "Idiomas",
-    skills: ["Espa\u00f1ol (Nativo)", "Ingl\u00e9s (Avanzado C1)"],
+    icon: "heart",
+    skills: ["Español (Nativo)", "Inglés (Avanzado C1)"],
   },
   {
     title: "Destrezas Blandas",
-    skills: ["Pensamiento cr\u00edtico", "Resoluci\u00f3n de problemas", "Curiosidad intelectual", "Adaptabilidad", "Trabajo bajo presi\u00f3n"],
+    icon: "heart",
+    skills: ["Pensamiento crítico", "Resolución de problemas", "Curiosidad intelectual", "Adaptabilidad", "Trabajo bajo presión", "Empatía", "Sensibilidad social"],
+  },
+  {
+    title: "A Fortalecer",
+    icon: "trending",
+    skills: ["Comunicación técnica", "Gestión del tiempo", "Trabajo en equipo"],
   },
 ]
 
@@ -34,22 +43,33 @@ export function SkillsSection() {
         <p className="text-center text-muted-foreground font-[var(--font-body)] mb-16 max-w-lg mx-auto">
           {"Las herramientas y capacidades que aplico para dar vida a las ideas."}
         </p>
-
         <div className="grid sm:grid-cols-2 gap-8">
           {skillCategories.map((category) => (
             <div
               key={category.title}
-              className="bg-card rounded-2xl border border-border p-8 hover:border-primary/30 transition-colors"
+              className={`bg-card rounded-2xl border p-8 hover:border-primary/30 transition-colors ${
+                category.icon === "trending"
+                  ? "border-dashed border-border/70"
+                  : "border-border"
+              }`}
             >
               <div className="flex items-center gap-2 mb-6">
-                <Heart className="h-4 w-4 text-primary fill-primary/30" />
+                {category.icon === "trending" ? (
+                  <TrendingUp className="h-4 w-4 text-primary" />
+                ) : (
+                  <Heart className="h-4 w-4 text-primary fill-primary/30" />
+                )}
                 <h3 className="font-serif text-xl text-foreground">{category.title}</h3>
               </div>
               <div className="flex flex-wrap gap-2">
                 {category.skills.map((skill) => (
                   <span
                     key={skill}
-                    className="px-4 py-2 text-sm font-[var(--font-body)] bg-secondary text-secondary-foreground rounded-full border border-border hover:border-primary/40 hover:bg-muted transition-colors cursor-default"
+                    className={`px-4 py-2 text-sm font-[var(--font-body)] rounded-full border transition-colors cursor-default ${
+                      category.icon === "trending"
+                        ? "bg-secondary/50 text-muted-foreground border-border/50 hover:border-primary/30"
+                        : "bg-secondary text-secondary-foreground border-border hover:border-primary/40 hover:bg-muted"
+                    }`}
                   >
                     {skill}
                   </span>
