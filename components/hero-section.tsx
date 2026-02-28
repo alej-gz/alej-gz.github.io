@@ -7,7 +7,7 @@ export function HeroSection() {
   const [open, setOpen] = useState(false)
 
   return (
-    <section className="relative min-h-screen flex flex-col items-center justify-center px-6 overflow-hidden">
+    <section className="relative min-h-screen flex flex-col items-center justify-start pt-32 px-6 overflow-hidden">
       {/* Decorative elements */}
       <div className="absolute top-20 left-10 w-64 h-64 bg-blush/30 rounded-full blur-3xl" />
       <div className="absolute bottom-20 right-10 w-80 h-80 bg-accent/20 rounded-full blur-3xl" />
@@ -15,7 +15,7 @@ export function HeroSection() {
 
       <div className="relative text-center max-w-3xl mx-auto">
         {/* Profile photo */}
-        <div className="mb-8" pt-20>
+        <div className="mb-8">
           <div
             className="inline-block rounded-full p-1.5 border-2 border-primary/40 bg-card shadow-lg cursor-zoom-in hover:border-primary/70 transition-colors"
             onClick={() => setOpen(true)}
