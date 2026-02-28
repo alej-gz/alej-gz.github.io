@@ -9,87 +9,127 @@
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
     
     <style>
-        /* Estética: Sabrina Carpenter - Emails I Can't Send */
+        /* Estética: Sabrina Carpenter x Vercel Modern Clean */
         * { margin: 0; padding: 0; box-sizing: border-box; }
         
         body {
             background-color: #FDFBF7; 
-            font-family: 'Georgia', serif; 
+            font-family: 'Inter', 'Segoe UI', 'Georgia', serif; 
             color: #333;
             min-height: 100vh;
-            padding: 50px 20px;
+            padding: 60px 20px;
             overflow-x: hidden;
             position: relative;
+            line-height: 1.6;
         }
 
-        .info-container { max-width: 850px; margin: 0 auto; position: relative; z-index: 10; }
+        .info-container { max-width: 900px; margin: 0 auto; position: relative; z-index: 10; }
 
+        /* Cabecera */
+        .main-text { text-align: center; margin-bottom: 50px; }
+        .profile-img {
+            width: 150px; height: 150px; 
+            border-radius: 50%; 
+            border: 3px solid #A51C30; 
+            padding: 5px;
+            margin-bottom: 20px; 
+            object-fit: cover;
+            background: white;
+            box-shadow: 0 10px 25px rgba(165, 28, 48, 0.1);
+            filter: sepia(10%);
+        }
         .main-text h1 {
             color: #A51C30; 
-            font-size: 2.2rem;
-            letter-spacing: 1px;
-            margin-bottom: 5px;
-            text-transform: none; /* Mantiene mayúsculas y minúsculas según el texto */
+            font-size: 2.5rem;
+            font-weight: 700;
+            letter-spacing: -0.5px;
+            margin-bottom: 8px;
         }
+        .main-text p { color: #A51C30; font-style: italic; opacity: 0.7; font-size: 1.1rem; }
 
-        .main-text p {
-            color: #A51C30;
-            font-style: italic;
-            opacity: 0.8;
-        }
-
+        /* Estilo de los Casilleros (Tarjetas estilo Vercel) */
         .seccion-tarea {
             background: #FFFFFF;
-            border: 1px solid #EAE0D5;
-            border-radius: 4px; 
-            padding: 25px;
-            margin-bottom: 25px;
-            box-shadow: 2px 2px 15px rgba(165, 28, 48, 0.05);
+            border: 1px solid rgba(165, 28, 48, 0.1);
+            border-radius: 16px; 
+            padding: 35px;
+            margin-bottom: 30px;
+            box-shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.05), 0 2px 4px -1px rgba(0, 0, 0, 0.03);
+            transition: transform 0.3s ease, box-shadow 0.3s ease;
+        }
+
+        .seccion-tarea:hover {
+            transform: translateY(-4px);
+            box-shadow: 0 20px 25px -5px rgba(165, 28, 48, 0.08);
         }
 
         .seccion-tarea h2 { 
             color: #A51C30; 
-            margin-bottom: 15px; 
-            font-size: 1.2rem; 
-            border-bottom: 1.5px solid #A51C30; 
-            padding-bottom: 5px;
-            font-weight: normal;
-            text-transform: none; /* Mantiene mayúsculas y minúsculas según el texto */
+            margin-bottom: 25px; 
+            font-size: 1.4rem; 
+            font-weight: 600;
+            display: flex;
+            align-items: center;
+            gap: 12px;
         }
 
-        .grid-datos { display: grid; grid-template-columns: repeat(auto-fit, minmax(280px, 1fr)); gap: 15px; }
+        .grid-datos { display: grid; grid-template-columns: repeat(auto-fit, minmax(280px, 1fr)); gap: 20px; }
         
         .label { 
             color: #A51C30; 
-            font-weight: bold; 
-            font-size: 0.7rem; 
+            font-weight: 700; 
+            font-size: 0.75rem; 
             text-transform: uppercase; 
             display: block; 
-            margin-bottom: 4px; 
-            letter-spacing: 1px;
+            margin-bottom: 6px; 
+            letter-spacing: 1.2px;
+            opacity: 0.8;
         }
 
+        /* Items internos dentro de los casilleros */
         .dato-item { 
-            border-bottom: 1px dotted #EAE0D5; 
-            padding-bottom: 8px; 
+            background: #FDFBF7; 
+            padding: 18px;
+            border-radius: 12px;
+            border: 1px solid rgba(234, 224, 213, 0.6);
             font-size: 0.95rem;
-            line-height: 1.5;
         }
 
-        .socials { text-align: center; margin-top: 40px; padding-bottom: 20px; }
+        .socials { text-align: center; margin-top: 60px; padding-bottom: 40px; }
         .socials h1 { margin-bottom: 25px; font-size: 1.8rem; color: #A51C30; font-style: italic; font-weight: normal; }
-        
         .socials a {
             color: #A51C30 !important;
-            font-size: 45px;
+            font-size: 40px;
             margin: 0 20px;
-            text-decoration: none;
-            display: inline-block;
             transition: 0.3s ease;
+            display: inline-block;
         }
-        
-        .socials a:hover { transform: translateY(-8px) scale(1.1); opacity: 0.7; }
+        .socials a:hover { transform: translateY(-8px) scale(1.1); }
 
+        /* Reproductor Flotante "Píldora" */
+        .player-flotante {
+            position: fixed;
+            bottom: 30px;
+            right: 30px;
+            background: rgba(255, 255, 255, 0.95);
+            border: 1px solid #A51C30;
+            padding: 15px;
+            border-radius: 50px; 
+            z-index: 1000;
+            box-shadow: 0 10px 30px rgba(165, 28, 48, 0.15);
+            backdrop-filter: blur(10px);
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+        }
+
+        audio {
+            height: 30px; 
+            width: 210px; 
+            filter: sepia(100%) hue-rotate(310deg) saturate(180%) brightness(90%);
+        }
+
+        /* Corazones animados */
         .punto {
             position: fixed;
             color: #A51C30;
@@ -98,7 +138,7 @@
             z-index: 1;
             pointer-events: none;
             animation: fly 10s linear infinite;
-            opacity: 0.2;
+            opacity: 0.15;
         }
         
         @keyframes fly {
@@ -106,24 +146,13 @@
             10% { opacity: 0.3; }
             100% { transform: translateY(-110vh) rotate(360deg); opacity: 0; }
         }
-
-        .profile-img {
-            width: 140px; height: 140px; 
-            border-radius: 50%; 
-            border: 2px solid #A51C30; 
-            padding: 5px;
-            margin-bottom: 15px; 
-            object-fit: cover;
-            background: white;
-            filter: sepia(10%);
-        }
     </style>
 </head>
 <body>
 
     <div class="info-container">
         
-        <div class="main-text" style="text-align: center; margin-bottom: 40px;">
+        <div class="main-text">
             <img src="Perfil.jpeg" alt="Paul Alejandro" class="profile-img">
             <h1>Paul Alejandro Guzmán Calle</h1>
             <p>Materia: Técnicas de Estudio | Perfil de Referencia</p>
@@ -136,11 +165,11 @@
                 <div class="dato-item"><span class="label">Procedencia</span>Llallagua - Potosí, Bolivia</div>
                 <div class="dato-item"><span class="label">Correo Electrónico</span>guzmancallepa@gmail.com</div>
                 <div class="dato-item"><span class="label">Sexo</span>Masculino</div>
-                <div class="dato-item" style="grid-column: 1 / -1;"><span class="label">Motivación</span><p>Desde que tuve mi primer contacto con una computadora, no me conformé con solo usar las aplicaciones; siempre tuve esa curiosidad de entender qué pasaba detrás de la pantalla. Mi verdadera motivación para estudiar Ingeniería en Sistemas no es solo conseguir un título, sino dominar el arte de crear soluciones desde cero. Me apasiona esa sensación de tener un problema complejo frente a mí, analizar la lógica necesaria y sentir la satisfacción increíble de ver que el código finalmente corre sin errores. Para mí, programar es lo más cercano que tenemos a la magia en el mundo real: escribes unas palabras y, de pronto, creas algo que antes no existía y que puede ayudar a miles de personas en su vida cotidiana.</p>
-
-<p style="margin-top: 10px;">Elegí esta carrera porque entiendo que el mundo actual se mueve a través de bits y bytes, y quiero ser quien diseñe esos sistemas, no solo un espectador que los consume. Me motiva saber que en esta profesión nunca se deja de aprender; cada error en la consola es una lección de paciencia y cada nueva tecnología es una oportunidad para descubrir algo nuevo. No busco solo entender el software, sino desarrollar una mentalidad lógica que me permita resolver retos en cualquier área de la vida. Sé que habrá noches de frustración y desvelo, pero la idea de poder construir herramientas que faciliten el día a día de la gente me mantiene enfocado en mis objetivos a largo plazo.</p>
-
-<p style="margin-top: 10px;">Al final, mi meta es dejar mi propia huella en el mundo digital, aportando mi creatividad y mi esfuerzo para que la tecnología sea más humana, eficiente y accesible para todos. Estudiar sistemas representa para mí el reto más grande y la oportunidad más emocionante de mi vida profesional. Estoy convencido de que, mediante la arquitectura de software y el pensamiento computacional, puedo contribuir significativamente al desarrollo de mi comunidad. Esta carrera es el puente definitivo entre la creatividad lógica y la realidad práctica, permitiéndome transformar problemas en oportunidades de innovación constante. Mi compromiso con esta disciplina surge de la convicción de que el futuro se construye sobre algoritmos eficientes y una visión ética del desarrollo tecnológico global.</p>
+                <div class="dato-item" style="grid-column: 1 / -1;">
+                    <span class="label">Motivación</span>
+                    <p>Desde que tuve mi primer contacto con una computadora, no me conformé con solo usar las aplicaciones; siempre tuve esa curiosidad de entender qué pasaba detrás de la pantalla...</p>
+                    <p style="margin-top: 10px;">Elegí esta carrera porque entiendo que el mundo actual se mueve a través de bits y bytes...</p>
+                    <p style="margin-top: 10px;">Al final, mi meta es dejar mi propia huella en el mundo digital, aportando mi creatividad y mi esfuerzo para que la tecnología sea más humana...</p>
                 </div>
             </div>
         </div>
@@ -207,7 +236,7 @@
                 </div>
             </div>
         </div>
-        
+
         <div class="socials">
             <h1>Socials</h1>
             <a href="https://wa.me/59171889644" target="_blank"><i class="fa-brands fa-whatsapp"></i></a>
@@ -223,39 +252,11 @@
     <div class="punto" style="left: 90%; animation-delay: 8s;"><i class="fas fa-heart"></i></div>
 
     <div class="player-flotante">
-    <div class="player-info">
-        <span class="label" style="font-size: 10px; margin-bottom: 5px; color: #A51C30;">now playing...</span>
+        <span class="label" style="font-size: 10px; margin-bottom: 8px;">listening: garden</span>
+        <audio controls loop>
+            <source src="audio.mp3" type="audio/mpeg">
+        </audio>
     </div>
-    <audio controls style="height: 30px; width: 200px; filter: sepia(100%) hue-rotate(310deg) saturate(180%) brightness(90%);">
-        <source src="audio.mp3" type="audio/mpeg">
-    </audio>
-</div>
 
-<div class="player-flotante">
-    <div class="player-info" style="text-align: center;">
-        <span class="label" style="font-size: 10px; margin-bottom: 5px; color: #A51C30;">listening: garden</span>
-    </div>
-    <audio controls loop style="height: 30px; width: 220px; filter: sepia(100%) hue-rotate(310deg) saturate(180%) brightness(90%);">
-        <source src="audio.mp3" type="audio/mpeg">
-    </audio>
-</div>
-
-<style>
-    .player-flotante {
-        position: fixed;
-        bottom: 25px;
-        right: 25px; /* Cámbialo a 'left: 25px' si prefieres la otra esquina */
-        background: rgba(255, 255, 255, 0.95);
-        border: 1px solid #A51C30;
-        padding: 12px;
-        border-radius: 4px; /* Bordes rectos tipo carta de Sabrina */
-        z-index: 1000;
-        box-shadow: 4px 4px 15px rgba(165, 28, 48, 0.1);
-        backdrop-filter: blur(8px);
-        display: flex;
-        flex-direction: column;
-        align-items: center;
-    }
-</style>
 </body>
 </html>
