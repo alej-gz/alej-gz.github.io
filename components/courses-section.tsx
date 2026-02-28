@@ -22,7 +22,7 @@ const courses = [
     completedAt: "2023",
   },
   {
-    name: "Ofimática (Programación en Visual Studio",
+    name: "Ofimática (Programación en Visual Studio)",
     platform: "Instituto Khana Marka (Oruro)",
     completedAt: "2022",
   }
@@ -69,3 +69,4 @@ export function CoursesSection() {
   )
 
 }
+
