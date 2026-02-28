@@ -15,7 +15,7 @@ export function HeroSection() {
 
       <div className="relative text-center max-w-3xl mx-auto">
         {/* Profile photo */}
-        <div className="mb-8">
+        <div className="mb-8" pt-20>
           <div
             className="inline-block rounded-full p-1.5 border-2 border-primary/40 bg-card shadow-lg cursor-zoom-in hover:border-primary/70 transition-colors"
             onClick={() => setOpen(true)}
