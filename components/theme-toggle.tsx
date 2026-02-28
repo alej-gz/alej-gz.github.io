@@ -12,8 +12,11 @@ export function ThemeToggle() {
 
   const apply = (t: "default" | "dog") => {
     const root = document.documentElement
-    root.classList.remove("dog")
-    if (t === "dog") root.classList.add("dog")
+    if (t === "dog") {
+      root.setAttribute("data-theme", "dog")
+    } else {
+      root.removeAttribute("data-theme")
+    }
     localStorage.setItem("theme", t)
     setTheme(t)
   }
@@ -23,7 +26,7 @@ export function ThemeToggle() {
   return (
     <button
       onClick={toggle}
-      title={theme === "default" ? "Cambiar a Man's Best Friend 🐾" : "Cambiar a Emails I Can't Send"}
+      title={theme === "default" ? "Cambiar a Man's Best Friend 🐾" : "Cambiar a Emails I Can't Send ✉️"}
       className="fixed top-6 right-6 z-50 w-10 h-10 rounded-full bg-card border border-border shadow-md flex items-center justify-center hover:border-primary/40 hover:bg-secondary transition-colors text-lg"
       aria-label="Cambiar tema"
     >
