@@ -3,25 +3,59 @@
 import { useState, useRef, useEffect } from "react"
 import { Play, Pause, Music } from "lucide-react"
 
+const themes = {
+  default: {
+    src: "/garden.mp3",
+    label: "garden",
+  },
+  dog: {
+    src: "/such a funny way.mp3",
+    label: "such a funny way",
+  },
+}
+
 export function AudioPlayer() {
   const [isPlaying, setIsPlaying] = useState(false)
   const [progress, setProgress] = useState(0)
+  const [theme, setTheme] = useState<"default" | "dog">("default")
   const audioRef = useRef<HTMLAudioElement>(null)
   const animationRef = useRef<number | null>(null)
+
+  // Detectar cambios de tema
+  useEffect(() => {
+    const observer = new MutationObserver(() => {
+      const isDog = document.documentElement.getAttribute("data-theme") === "dog"
+      setTheme(isDog ? "dog" : "default")
+    })
+    observer.observe(document.documentElement, { attributes: true, attributeFilter: ["data-theme"] })
+
+    // Check inicial
+    const isDog = document.documentElement.getAttribute("data-theme") === "dog"
+    setTheme(isDog ? "dog" : "default")
+
+    return () => observer.disconnect()
+  }, [])
+
+  // Cuando cambia el tema, pausar y resetear
+  useEffect(() => {
+    if (!audioRef.current) return
+    audioRef.current.pause()
+    audioRef.current.currentTime = 0
+    setIsPlaying(false)
+    setProgress(0)
+    if (animationRef.current) cancelAnimationFrame(animationRef.current)
+  }, [theme])
 
   const updateProgress = () => {
     if (audioRef.current) {
       const { currentTime, duration } = audioRef.current
-      if (duration > 0) {
-        setProgress((currentTime / duration) * 100)
-      }
+      if (duration > 0) setProgress((currentTime / duration) * 100)
       animationRef.current = requestAnimationFrame(updateProgress)
     }
   }
 
   const togglePlay = () => {
     if (!audioRef.current) return
-
     if (isPlaying) {
       audioRef.current.pause()
       if (animationRef.current) cancelAnimationFrame(animationRef.current)
@@ -35,19 +69,19 @@ export function AudioPlayer() {
   useEffect(() => {
     const audio = audioRef.current
     if (!audio) return
-
     const handleEnded = () => {
       setIsPlaying(false)
       setProgress(0)
       if (animationRef.current) cancelAnimationFrame(animationRef.current)
     }
-
     audio.addEventListener("ended", handleEnded)
     return () => {
       audio.removeEventListener("ended", handleEnded)
       if (animationRef.current) cancelAnimationFrame(animationRef.current)
     }
   }, [])
+
+  const current = themes[theme]
 
   return (
     <div className="fixed bottom-6 right-6 z-50">
@@ -57,11 +91,7 @@ export function AudioPlayer() {
           className="flex-shrink-0 w-9 h-9 rounded-full bg-primary text-primary-foreground flex items-center justify-center hover:opacity-90 transition-opacity"
           aria-label={isPlaying ? "Pausar" : "Reproducir"}
         >
-          {isPlaying ? (
-            <Pause className="h-4 w-4" />
-          ) : (
-            <Play className="h-4 w-4 ml-0.5" />
-          )}
+          {isPlaying ? <Pause className="h-4 w-4" /> : <Play className="h-4 w-4 ml-0.5" />}
         </button>
 
         <div className="flex-1 min-w-0">
@@ -72,7 +102,7 @@ export function AudioPlayer() {
             </span>
           </div>
           <p className="text-xs font-serif italic text-foreground truncate">
-            listening: garden
+            listening: {current.label}
           </p>
           <div className="mt-1.5 h-1 bg-secondary rounded-full overflow-hidden">
             <div
@@ -85,9 +115,8 @@ export function AudioPlayer() {
 
       <audio
         ref={audioRef}
-        src="/garden.mp3"
+        src={current.src}
         preload="none"
-        crossOrigin="anonymous"
       />
     </div>
   )
