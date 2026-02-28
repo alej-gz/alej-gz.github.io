@@ -1,3 +1,5 @@
+import { CoursesSection } from "@/components/courses-section"
+import { PhotosSection } from "@/components/photos-section"
 import { Navigation } from "@/components/navigation"
 import { HeroSection } from "@/components/hero-section"
 import { AboutSection } from "@/components/about-section"
@@ -23,6 +25,8 @@ export default function Home() {
       <SpecializationSection />
       <ProjectsSection />
       <SkillsSection />
+      <CoursesSection />
+      <PhotosSection />
       <ExperienceSection />
       <MotivationSection />
       <BlogSection />
