@@ -2,25 +2,30 @@ import { BookOpen } from "lucide-react"
 
 const courses = [
   {
-    name: "Nombre del curso 1",
-    platform: "Udemy",
-    completedAt: "Enero 2024",
+    name: "Guitarra",
+    platform: "Rimay",
+    completedAt: "2022-2025",
   },
   {
-    name: "Nombre del curso 2",
-    platform: "Coursera",
-    completedAt: "Marzo 2024",
+    name: "Volleyball",
+    platform: "Club Revenge",
+    completedAt: "2024-2025",
   },
   {
-    name: "Nombre del curso 3",
+    name: "Curso C++",
     platform: "YouTube",
-    completedAt: "Junio 2024",
+    completedAt: "Julio 2024",
   },
   {
-    name: "Nombre del curso 4",
-    platform: "freeCodeCamp",
-    completedAt: "Septiembre 2024",
+    name: "Programación en Lua",
+    platform: "Mentor-Lab (Virtual)",
+    completedAt: "2023",
   },
+  {
+    name: "Ofimática (Programación en Visual Studio",
+    platform: "Instituto Khana Marka (Oruro)",
+    completedAt: "2022",
+  }
 ]
 
 export function CoursesSection() {
@@ -62,4 +67,5 @@ export function CoursesSection() {
       </div>
     </section>
   )
+
 }
