@@ -6,14 +6,14 @@ const projects = [
     description:
       "Página personal de referencias y perfil profesional. Diseñada para presentar formación académica, logros y áreas de especialización.",
     tags: ["Next.js", "TypeScript", "Tailwind CSS", "Vercel"],
-    liveUrl: "https://coso-seven.vercel.app",
+    liveUrl: "https://alej-gz.vercel.app",
     githubUrl: "https://github.com/alej-gz/alej-gz.github.io",
   },
   {
     title: "Bots de Discord",
     description:
-      "Desarrollo de bots para servidores de Discord con comandos personalizados. Primeros proyectos de programación en Java, explorando automatización e interacción con APIs externas.",
-    tags: ["Java", "Discord API", "Automatización"],
+      "Desarrollo de bots para servidores de Discord con comandos personalizados. Primeros proyectos de programación en JavaScript, explorando automatización e interacción con APIs externas.",
+    tags: ["JavaScript", "Discord API", "Automatización", "TypeScript"],
     liveUrl: "#",
     githubUrl: "#",
   },
