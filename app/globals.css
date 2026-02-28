@@ -38,14 +38,75 @@
   --sidebar-accent-foreground: #4A3333;
   --sidebar-border: #F0D0D0;
   --sidebar-ring: #D47C8A;
-
-  /* custom tokens for the love-letter theme */
   --rose-gold: #C88E98;
   --blush: #F2C4CE;
   --cream: #FFF8F0;
   --dusty-rose: #B86B78;
   --soft-pink: #FDE8E8;
   --envelope: #F5E6D8;
+}
+
+/* 🐾 Man's Best Friend — borgoña vintage oscuro */
+[data-theme="dog"] {
+  --background: #1A0A0A;
+  --foreground: #F0E6D8;
+  --card: #231010;
+  --card-foreground: #F0E6D8;
+  --popover: #231010;
+  --popover-foreground: #F0E6D8;
+  --primary: #D4B896;
+  --primary-foreground: #1A0A0A;
+  --secondary: #2E1515;
+  --secondary-foreground: #F0E6D8;
+  --muted: #2E1515;
+  --muted-foreground: #9A7A6A;
+  --accent: #3A1A1A;
+  --accent-foreground: #F0E6D8;
+  --destructive: #8B3030;
+  --destructive-foreground: #F0E6D8;
+  --border: #3A1A1A;
+  --input: #3A1A1A;
+  --ring: #D4B896;
+  --chart-1: #D4B896;
+  --chart-2: #B89070;
+  --chart-3: #8B6050;
+  --chart-4: #6B4040;
+  --chart-5: #4A2020;
+  --sidebar: #150808;
+  --sidebar-foreground: #F0E6D8;
+  --sidebar-primary: #D4B896;
+  --sidebar-primary-foreground: #1A0A0A;
+  --sidebar-accent: #2E1515;
+  --sidebar-accent-foreground: #F0E6D8;
+  --sidebar-border: #3A1A1A;
+  --sidebar-ring: #D4B896;
+  --rose-gold: #D4B896;
+  --blush: #6B3030;
+  --cream: #F0E6D8;
+  --dusty-rose: #8B5050;
+  --soft-pink: #2E1515;
+  --envelope: #3A2010;
+}
+
+[data-theme="dog"] body::after {
+  content: "";
+  position: fixed;
+  inset: 0;
+  background-image: url("data:image/svg+xml,%3Csvg viewBox='0 0 200 200' xmlns='http://www.w3.org/2000/svg'%3E%3Cfilter id='noise'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='0.85' numOctaves='4' stitchTiles='stitch'/%3E%3C/filter%3E%3Crect width='100%25' height='100%25' filter='url(%23noise)' opacity='1'/%3E%3C/svg%3E");
+  opacity: 0.05;
+  pointer-events: none;
+  z-index: 9999;
+}
+
+[data-theme="dog"] body::before {
+  content: "🐾";
+  position: fixed;
+  bottom: 1.5rem;
+  left: 1.5rem;
+  font-size: 1.5rem;
+  opacity: 0.12;
+  pointer-events: none;
+  z-index: 0;
 }
 
 @theme inline {
@@ -106,7 +167,6 @@
   }
 }
 
-/* Floating hearts & feathers animation */
 @keyframes float-up {
   0% {
     transform: translateY(0) rotate(0deg) translateX(0);
