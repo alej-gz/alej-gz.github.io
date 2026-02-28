@@ -2,8 +2,13 @@ import { BookOpen } from "lucide-react"
 
 const courses = [
   {
+    name: "Programación con JavaScript y React",
+    platform: "Academia Cisco Evolutech",
+    completedAt: "En curso",
+  },
+  {
     name: "Guitarra",
-    platform: "Rimay",
+    platform: "Centro Músical Rimay",
     completedAt: "2022-2025",
   },
   {
@@ -14,7 +19,12 @@ const courses = [
   {
     name: "Curso C++",
     platform: "YouTube",
-    completedAt: "Julio 2024",
+    completedAt: "2024",
+  },
+  {
+    name: "Curso Node.js",
+    platform: "Youtube",
+    completedAt: "2023",
   },
   {
     name: "Programación en Lua",
@@ -25,7 +35,22 @@ const courses = [
     name: "Ofimática (Programación en Visual Studio)",
     platform: "Instituto Khana Marka (Oruro)",
     completedAt: "2022",
-  }
+  },
+  {
+    name: "Inglés",
+    platform: "Particular",
+    completedAt: "2020-2021"
+  },
+  {
+    name: "Inglés",
+    platform: "Instituto Cesicom",
+    completedAt: "2017-2020"
+  },
+  {
+    name: "Informática y Ensamblaje de Computadoras",
+    platform: "Instituto Cesicom",
+    completedAt: "2016-2017",
+  }, 
 ]
 
 export function CoursesSection() {
@@ -69,4 +94,5 @@ export function CoursesSection() {
   )
 
 }
+
 
