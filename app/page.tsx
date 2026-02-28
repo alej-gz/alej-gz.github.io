@@ -14,6 +14,7 @@ import { ContactSection } from "@/components/contact-section"
 import { Footer } from "@/components/footer"
 import { FloatingParticles } from "@/components/floating-particles"
 import { AudioPlayer } from "@/components/audio-player"
+import { ThemeToggle } from "@/components/theme-toggle"
 
 export default function Home() {
   return (
@@ -34,6 +35,7 @@ export default function Home() {
       <ContactSection />
       <Footer />
       <AudioPlayer />
+      <ThemeToggle />
     </main>
   )
 }
