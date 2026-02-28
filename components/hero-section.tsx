@@ -13,7 +13,7 @@ export function HeroSection() {
         <div className="mb-8">
           <div className="inline-block rounded-full p-1.5 border-2 border-primary/40 bg-card shadow-lg">
             <img
-              src="https://alej-gz.github.io/yo.jpeg"
+              src="/yo.jpeg"
               alt="Paul Alejandro Guzm&aacute;n Calle"
               className="w-32 h-32 md:w-40 md:h-40 rounded-full object-cover sepia-[0.1]"
             />
