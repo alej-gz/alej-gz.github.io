@@ -85,7 +85,7 @@ export function AudioPlayer() {
 
       <audio
         ref={audioRef}
-        src="https://alej-gz.github.io/garden.mp3"
+        src="/garden.mp3"
         preload="none"
         crossOrigin="anonymous"
       />
