@@ -9,7 +9,7 @@ const references = [
     company: "Tel: 73880366",
   },
   {
-  quote: "Referencia académica y profesional. Docente de inglés que respaldó la participación de Paul Alejandro como instructor en el instituto.",
+  quote: "Referencia académica y profesional. Docente de inglés que respaldó la participación de Paul Alejandro como instructor en el instituto CESICOM.",
   name: "Alain Signori",
   role: "Docente de Inglés",
   company: "Tel: 73947669",
