@@ -111,7 +111,7 @@
 
 /* 💋 CMIH — azul teal profundo, rojo labial, cinematográfico */
 [data-theme="cmih"] {
-  --background: #0D2030;
+  --background: transparent;
   --foreground: #C8A96E;
   --card: #112535;
   --card-foreground: #C8A96E;
@@ -152,10 +152,24 @@
   --envelope: #1E3A4A;
 }
 
-[data-theme="cmih"] body {
+[data-theme="cmih"] body::before {
+  content: "";
+  position: fixed;
+  inset: 0;
   background: linear-gradient(160deg, #A8D8E8 0%, #2A7A8A 35%, #1A4A5A 65%, #0D2030 100%);
-  min-height: 100vh;
-  background-attachment: fixed;
+  z-index: -1;
+  pointer-events: none;
+}
+
+[data-theme="cmih"] body::after {
+  content: "☕";
+  position: fixed;
+  bottom: 1.5rem;
+  left: 1.5rem;
+  font-size: 1.5rem;
+  opacity: 0.2;
+  pointer-events: none;
+  z-index: 0;
 }
 
 [data-theme="cmih"] body::before {
