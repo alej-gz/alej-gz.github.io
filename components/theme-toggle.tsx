@@ -7,7 +7,7 @@ type Theme = "default" | "dog" | "cmih"
 const themes: { id: Theme; emoji: string; title: string }[] = [
   { id: "default", emoji: "✉️", title: "Emails I Can't Send" },
   { id: "dog", emoji: "🐾", title: "Man's Best Friend" },
-  { id: "cmih", emoji: "💋", title: "CMIH" },
+  { id: "cmih", emoji: "☕", title: "Shor't and Sweet" },
 ]
 
 export function ThemeToggle() {
