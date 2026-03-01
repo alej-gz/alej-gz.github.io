@@ -1,4 +1,4 @@
-import { Heart, Brain, Code2, Music } from "lucide-react"
+import { Heart, Brain, Code2, Music, Layout } from "lucide-react"
 
 export function AboutSection() {
   return (
@@ -63,6 +63,12 @@ export function AboutSection() {
                 description:
                   "La m\u00fasica es mi forma de desconectar. Toco el bajo por pasi\u00f3n y gusto propio.",
               },
+              {
+              icon: Layout,
+              title: "Desarrollo Frontend",
+              description:
+                "Me apasiona crear interfaces que combinen estética y funcionalidad. Disfruto mucho el proceso de diseñar experiencias visuales con código.",
+            },
             ].map((item) => (
               <div
                 key={item.title}
