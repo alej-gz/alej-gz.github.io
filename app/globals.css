@@ -183,7 +183,13 @@
   z-index: 0;
 }
 
+
 /* Transparencia de secciones en tema cmih */
+[data-theme="dog"] .firma,
+[data-theme="cmih"] .firma {
+  filter: invert(1);
+}
+
 [data-theme="cmih"] .bg-secondary\/30 {
   background-color: rgba(22, 48, 64, 0.15) !important;
 }
