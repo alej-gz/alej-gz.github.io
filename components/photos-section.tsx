@@ -17,9 +17,13 @@ const photos = [
   },
   {
     src: "/certificado-canguro.jpeg",
-    caption: "Certificado Olimpiadas Canguro - 2021",
+    caption: "Certificado Medalla Olimpiadas Canguro - 2021",
     orientation: "portrait",
   },
+  {
+    src: "/umsa.jpeg",
+    caption: 'Certificado Medalla Olimpiadas UMSA - 2020",
+  }
 ]
 
 export function PhotosSection() {
@@ -80,4 +84,5 @@ export function PhotosSection() {
     </section>
   )
 }
+
 
