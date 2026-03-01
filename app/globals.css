@@ -183,6 +183,19 @@
   z-index: 0;
 }
 
+/* Transparencia de secciones en tema cmih */
+[data-theme="cmih"] .bg-secondary\/30 {
+  background-color: rgba(22, 48, 64, 0.4) !important;
+}
+
+[data-theme="cmih"] .bg-card {
+  background-color: rgba(17, 37, 53, 0.75) !important;
+}
+
+[data-theme="cmih"] .bg-card\/95 {
+  background-color: rgba(17, 37, 53, 0.9) !important;
+}
+
 @theme inline {
   --font-sans: 'Playfair Display', 'Georgia', serif;
   --font-serif: 'Playfair Display', 'Georgia', serif;
