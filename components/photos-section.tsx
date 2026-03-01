@@ -6,16 +6,12 @@ import Image from "next/image"
 
 const photos = [
   {
-    src: "/foto1.jpg",
-    caption: "Descripción de la foto 1",
+    src: "/familia-sucre.jpeg",
+    caption: "Con mi familia en Sucre, de pequeño",
   },
   {
-    src: "/foto2.jpg",
-    caption: "Descripción de la foto 2",
-  },
-  {
-    src: "/foto3.jpg",
-    caption: "Descripción de la foto 3",
+    src: "/certificado.jpeg",
+    caption: "Certificado de Bachiller de Excelencia — 2025",
   },
 ]
 
@@ -96,4 +92,5 @@ export function PhotosSection() {
       </div>
     </section>
   )
+
 }
