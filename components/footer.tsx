@@ -1,3 +1,5 @@
+"use client"
+
 import { Heart } from "lucide-react"
 import Image from "next/image"
 
@@ -6,7 +8,11 @@ export function Footer() {
     <footer className="py-10 px-6 border-t border-border">
       <div className="max-w-5xl mx-auto flex flex-col items-center gap-6">
         {/* Firma */}
-        <div className="opacity-70 hover:opacity-100 transition-opacity">
+        <div
+          className="opacity-80 hover:opacity-100 transition-opacity duration-300 cursor-default"
+          onMouseEnter={e => (e.currentTarget.style.filter = 'drop-shadow(0 0 12px var(--primary))')}
+          onMouseLeave={e => (e.currentTarget.style.filter = 'none')}
+        >
           <Image
             src="/firma.png"
             alt="Firma de Paul Alejandro Guzmán Calle"
