@@ -42,7 +42,7 @@ export function ThemeToggle() {
     <button
       onClick={toggle}
       title={`Cambiar a ${next.title} ${next.emoji}`}
-      className="fixed top-6 right-6 z-50 w-10 h-10 rounded-full bg-card border border-border shadow-md flex items-center justify-center hover:border-primary/40 hover:bg-secondary transition-colors text-lg"
+      className="fixed bottom-24 right-4 md:top-6 md:bottom-auto md:right-6 z-50 w-10 h-10 rounded-full bg-card border border-border shadow-md flex items-center justify-center hover:border-primary/40 hover:bg-secondary transition-colors text-lg"
       aria-label="Cambiar tema"
     >
       {current.emoji}
