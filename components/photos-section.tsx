@@ -13,12 +13,12 @@ const photos = [
   {
     src: "/certificado.jpeg",
     caption: "Certificado de Bachiller de Excelencia — 2025",
-    orientation: "portrait",
+    orientation: "landscape",
   },
   {
     src: "/certificado-canguro.jpeg",
     caption: "Certificado Olimpiadas Canguro - 2021",
-    orientation: "landscape",
+    orientation: "portrait",
   },
 ]
 
@@ -80,3 +80,4 @@ export function PhotosSection() {
     </section>
   )
 }
+
