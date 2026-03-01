@@ -109,6 +109,60 @@
   z-index: 0;
 }
 
+/* 💋 Cmd I Heart — azul cielo, rojo labial, verano */
+[data-theme="cmih"] {
+  --background: #E8F4FD;
+  --foreground: #1A2A3A;
+  --card: #F0F9FF;
+  --card-foreground: #1A2A3A;
+  --popover: #F0F9FF;
+  --popover-foreground: #1A2A3A;
+  --primary: #C0392B;
+  --primary-foreground: #FFFFFF;
+  --secondary: #D6EAF8;
+  --secondary-foreground: #1A2A3A;
+  --muted: #D6EAF8;
+  --muted-foreground: #5D6D7E;
+  --accent: #AED6F1;
+  --accent-foreground: #1A2A3A;
+  --destructive: #C0392B;
+  --destructive-foreground: #FFFFFF;
+  --border: #AED6F1;
+  --input: #AED6F1;
+  --ring: #C0392B;
+  --chart-1: #C0392B;
+  --chart-2: #2E86C1;
+  --chart-3: #F1948A;
+  --chart-4: #85C1E9;
+  --chart-5: #E74C3C;
+  --radius: 0.75rem;
+  --sidebar: #D6EAF8;
+  --sidebar-foreground: #1A2A3A;
+  --sidebar-primary: #C0392B;
+  --sidebar-primary-foreground: #FFFFFF;
+  --sidebar-accent: #AED6F1;
+  --sidebar-accent-foreground: #1A2A3A;
+  --sidebar-border: #AED6F1;
+  --sidebar-ring: #C0392B;
+  --rose-gold: #E74C3C;
+  --blush: #FADBD8;
+  --cream: #EBF5FB;
+  --dusty-rose: #C0392B;
+  --soft-pink: #FADBD8;
+  --envelope: #D6EAF8;
+}
+
+[data-theme="cmih"] body::before {
+  content: "☕";
+  position: fixed;
+  bottom: 1.5rem;
+  left: 1.5rem;
+  font-size: 1.5rem;
+  opacity: 0.2;
+  pointer-events: none;
+  z-index: 0;
+}
+
 @theme inline {
   --font-sans: 'Playfair Display', 'Georgia', serif;
   --font-serif: 'Playfair Display', 'Georgia', serif;
