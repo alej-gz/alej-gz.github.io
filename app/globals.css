@@ -109,47 +109,47 @@
   z-index: 0;
 }
 
-/* 💋 Cmd I Heart — azul cielo, rojo labial, verano */
+/* 💋 CMIH — azul teal profundo, rojo labial, cinematográfico */
 [data-theme="cmih"] {
-  --background: #E8F4FD;
-  --foreground: #1A2A3A;
-  --card: #F0F9FF;
-  --card-foreground: #1A2A3A;
-  --popover: #F0F9FF;
-  --popover-foreground: #1A2A3A;
+  --background: #0D1F2D;
+  --foreground: #F0EDE8;
+  --card: #132433;
+  --card-foreground: #F0EDE8;
+  --popover: #132433;
+  --popover-foreground: #F0EDE8;
   --primary: #C0392B;
   --primary-foreground: #FFFFFF;
-  --secondary: #D6EAF8;
-  --secondary-foreground: #1A2A3A;
-  --muted: #D6EAF8;
-  --muted-foreground: #5D6D7E;
-  --accent: #AED6F1;
-  --accent-foreground: #1A2A3A;
+  --secondary: #1A2F40;
+  --secondary-foreground: #F0EDE8;
+  --muted: #1A2F40;
+  --muted-foreground: #7A9BB0;
+  --accent: #1E3A4A;
+  --accent-foreground: #F0EDE8;
   --destructive: #C0392B;
   --destructive-foreground: #FFFFFF;
-  --border: #AED6F1;
-  --input: #AED6F1;
+  --border: #1E3A4A;
+  --input: #1E3A4A;
   --ring: #C0392B;
   --chart-1: #C0392B;
-  --chart-2: #2E86C1;
-  --chart-3: #F1948A;
-  --chart-4: #85C1E9;
-  --chart-5: #E74C3C;
+  --chart-2: #1A6B8A;
+  --chart-3: #E8A0A0;
+  --chart-4: #2A5A70;
+  --chart-5: #8B1A1A;
   --radius: 0.75rem;
-  --sidebar: #D6EAF8;
-  --sidebar-foreground: #1A2A3A;
+  --sidebar: #0A1A28;
+  --sidebar-foreground: #F0EDE8;
   --sidebar-primary: #C0392B;
   --sidebar-primary-foreground: #FFFFFF;
-  --sidebar-accent: #AED6F1;
-  --sidebar-accent-foreground: #1A2A3A;
-  --sidebar-border: #AED6F1;
+  --sidebar-accent: #1A2F40;
+  --sidebar-accent-foreground: #F0EDE8;
+  --sidebar-border: #1E3A4A;
   --sidebar-ring: #C0392B;
-  --rose-gold: #E74C3C;
-  --blush: #FADBD8;
-  --cream: #EBF5FB;
-  --dusty-rose: #C0392B;
-  --soft-pink: #FADBD8;
-  --envelope: #D6EAF8;
+  --rose-gold: #C0392B;
+  --blush: #3A1A1A;
+  --cream: #F0EDE8;
+  --dusty-rose: #8B1A1A;
+  --soft-pink: #1A2F40;
+  --envelope: #1E3A4A;
 }
 
 [data-theme="cmih"] body::before {
