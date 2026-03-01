@@ -22,7 +22,8 @@ const photos = [
   },
   {
     src: "/umsa.jpeg",
-    caption: 'Certificado Medalla Olimpiadas UMSA - 2020",
+    caption: "Certificado Medalla Olimpiadas UMSA - 2020",
+    orientation: "landscape",
   }
 ]
 
@@ -84,5 +85,6 @@ export function PhotosSection() {
     </section>
   )
 }
+
 
 
