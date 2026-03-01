@@ -10,7 +10,7 @@ export function Footer() {
           <Image
             src="/firma.png"
             alt="Firma de Paul Alejandro Guzmán Calle"
-            width={200}
+            width={300}
             height={80}
             className="object-contain [mix-blend-mode:multiply] dark:[mix-blend-mode:screen]"
           />
