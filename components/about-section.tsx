@@ -23,16 +23,24 @@ export function AboutSection() {
               {"Querido visitante,"}
             </p>
 
+            <p className="text-sm text-muted-foreground font-[var(--font-body)] italic mb-4">
+  {"Querido visitante,"}
+</p>
+
             <p className="text-muted-foreground font-[var(--font-body)] leading-relaxed mb-4">
-              {"Desde que tuve mi primer contacto con una computadora, no me conform\u00e9 con solo usar las aplicaciones; siempre tuve esa curiosidad de entender qu\u00e9 pasaba detr\u00e1s de la pantalla. Para m\u00ed, programar es lo m\u00e1s cercano que tenemos a la magia en el mundo real."}
+              {"Desde que tuve mi primer contacto con una computadora, algo en mí cambió. No me conformé con ser un simple espectador o un usuario más de las aplicaciones; siempre sentí esa curiosidad electrizante por entender qué ocurría realmente detrás de la pantalla, en ese mundo de lógica invisible. Para mí, programar es lo más cercano que tenemos a la magia en el mundo real: es la capacidad de escribir palabras que se transforman en realidades, creando algo de la nada que puede facilitar la vida de miles de personas. Esa chispa de asombro es la que me guía cada día en este camino de aprendizaje constante."}
             </p>
 
             <p className="text-muted-foreground font-[var(--font-body)] leading-relaxed mb-4">
-              {"Estudio Ingenier\u00eda en Sistemas porque entiendo que el mundo actual se mueve a trav\u00e9s de bits y bytes, y quiero ser quien dise\u00f1e esos sistemas. Me apasionan las Ciencias Cognitivas Computacionales y el desarrollo de Arquitecturas Cognitivas."}
+              {"Estudio Ingeniería en Sistemas porque tengo la convicción de que el mundo actual se mueve a través de bits y bytes, y no quiero solo habitarlos, quiero ser quien diseñe los sistemas que sostienen nuestro futuro. Mi fascinación va más allá del código tradicional; me apasionan profundamente las Ciencias Cognitivas Computacionales y el desarrollo de Arquitecturas Cognitivas. Me interesa explorar cómo los procesos mentales —como la memoria y el aprendizaje— pueden modelarse en sistemas digitales para crear una tecnología más inteligente, pero sobre todo, más humana y comprensiva con nuestras propias capacidades."}
+            </p>
+
+            <p className="text-muted-foreground font-[var(--font-body)] leading-relaxed mb-4">
+              {"Sin embargo, creo que un ingeniero no es solo alguien que resuelve problemas técnicos, sino alguien que sabe conectar mundos. Por eso, cuando no estoy sumergido en líneas de código, me encontrarás tocando el bajo eléctrico, donde busco la misma armonía y estructura que en un buen software. También dedico tiempo a la enseñanza del inglés, una labor que me ha enseñado que la comunicación es la base de todo progreso, ya sea entre humanos o entre máquinas. Estas pasiones son mi cable a tierra y mi fuente de inspiración para seguir explorando nuevas tecnologías."}
             </p>
 
             <p className="text-muted-foreground font-[var(--font-body)] leading-relaxed">
-              {"Cuando no estoy programando, me encontrar\u00e1s tocando el bajo el\u00e9ctrico, ense\u00f1ando ingl\u00e9s, o explorando nuevas tecnolog\u00edas que conecten la creatividad con la l\u00f3gica."}
+              {"Mi meta final es fusionar la creatividad con la lógica más pura. Entiendo que esta carrera exige noches de desvelo y una resiliencia inquebrantable ante los errores, pero estoy listo para el reto. Quiero aportar mi grano de arena al desarrollo tecnológico, diseñando herramientas que no solo sean eficientes, sino que tengan un propósito claro y ético. Al final del día, se trata de utilizar el pensamiento computacional como un puente para construir una realidad más conectada, innovadora y, por encima de todo, accesible para cada miembro de nuestra sociedad."}
             </p>
 
             <p className="text-sm text-primary font-serif italic mt-6">
