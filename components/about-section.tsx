@@ -23,10 +23,6 @@ export function AboutSection() {
               {"Querido visitante,"}
             </p>
 
-            <p className="text-sm text-muted-foreground font-[var(--font-body)] italic mb-4">
-  {"Querido visitante,"}
-</p>
-
             <p className="text-muted-foreground font-[var(--font-body)] leading-relaxed mb-4">
               {"Desde que tuve mi primer contacto con una computadora, algo en mí cambió. No me conformé con ser un simple espectador o un usuario más de las aplicaciones; siempre sentí esa curiosidad electrizante por entender qué ocurría realmente detrás de la pantalla, en ese mundo de lógica invisible. Para mí, programar es lo más cercano que tenemos a la magia en el mundo real: es la capacidad de escribir palabras que se transforman en realidades, creando algo de la nada que puede facilitar la vida de miles de personas. Esa chispa de asombro es la que me guía cada día en este camino de aprendizaje constante."}
             </p>
