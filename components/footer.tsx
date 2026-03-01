@@ -10,7 +10,7 @@ export function Footer() {
         {/* Firma */}
         <div
           className="opacity-80 hover:opacity-100 transition-opacity duration-300 cursor-default"
-          onMouseEnter={e => (e.currentTarget.style.filter = 'drop-shadow(0 0 20px var(--primary)) drop-shadow(0 0 40px var(--primary))')}
+          onMouseEnter={e => (e.currentTarget.style.filter = 'drop-shadow(0 0 15px var(--primary)) drop-shadow(0 0 35px var(--primary)) drop-shadow(0 0 60px var(--primary))')}
           onMouseLeave={e => (e.currentTarget.style.filter = 'none')}
         >
           <Image
