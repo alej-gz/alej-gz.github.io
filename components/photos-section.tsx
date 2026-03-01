@@ -13,6 +13,10 @@ const photos = [
     src: "/certificado.jpeg",
     caption: "Certificado de Bachiller de Excelencia — 2025",
   },
+  {
+    src: "/certificado-canguro.jpeg",
+    caption: "Certificado Olimpiadas Canguro - 2021"
+  }
 ]
 
 export function PhotosSection() {
@@ -94,3 +98,4 @@ export function PhotosSection() {
   )
 
 }
+
