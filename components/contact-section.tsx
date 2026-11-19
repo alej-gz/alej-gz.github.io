@@ -16,8 +16,8 @@ const socials = [
   {
     icon: Instagram,
     label: "Instagram",
-    href: "https://instagram.com/alej_gz.ip",
-    handle: "@alej_gz.ip",
+    href: "https://instagram.com/alej_gzm.c",
+    handle: "@alej_gzm.c",
   },
   {
     icon: Phone,
