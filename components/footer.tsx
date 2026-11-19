@@ -1,6 +1,6 @@
 "use client"
 
-import { Heart } from "lucide-react"
+import { Heart, Instagram } from "lucide-react"
 import Image from "next/image"
 
 export function Footer() {
@@ -32,6 +32,17 @@ export function Footer() {
             <span>{"y Next.js"}</span>
           </div>
         </div>
+
+        <a
+          href="https://instagram.com/alej_gzm.c"
+          target="_blank"
+          rel="noopener noreferrer"
+          className="flex items-center gap-2 text-sm text-muted-foreground hover:text-primary transition-colors font-[var(--font-body)]"
+          aria-label="Instagram de Paul Alejandro Guzmán Calle: @alej_gzm.c"
+        >
+          <Instagram className="h-4 w-4" />
+          <span>{"@alej_gzm.c"}</span>
+        </a>
       </div>
     </footer>
   )
